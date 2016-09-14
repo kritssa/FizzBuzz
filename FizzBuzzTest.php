@@ -30,6 +30,11 @@ class FizzBuzz
 class FizzBuzzTest extends PHPUnit_Framework_TestCase
 {
 
+    function testShouldBeEleven()
+    {
+      $FizzBuzz = new FizzBuzz(11);
+      $this->assertEquals("11",$FizzBuzz->Count());
+    }
     function teestSholudBeTwelve()
     {
       $FizzBuzz = new FizzBuzz(12);
