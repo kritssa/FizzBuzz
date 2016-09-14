@@ -12,6 +12,12 @@ class FizzBuzz
       if($this->number == 2)
       {
         return "2";
+      }else if($this->number ==3 )
+      {
+        return "Fizz";
+      }else if($this->number==5)
+      {
+        return "Buzz";
       }
       return "1";
     }
@@ -19,7 +25,17 @@ class FizzBuzz
 
 class FizzBuzzTest extends PHPUnit_Framework_TestCase
 {
-    
+    function testShouldBeFive()
+    {
+      $FizzBuzz = new FizzBuzz(5);
+      $this->assertEquals("Buzz",$FizzBuzz->Count());
+    }
+
+    function testShouldBeThree()
+    {
+        $FizzBuzz = new FizzBuzz(3);
+        $this->assertEquals("Fizz",$FizzBuzz->count());
+    }
 
     function testShouldBeTwo()
     {
