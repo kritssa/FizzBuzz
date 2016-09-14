@@ -1,29 +1,37 @@
 <?php
 
-class FizzBuzz
+class FuzzBuzzOperand
 {
-    function __construct($number)
+    static function cal($number)
     {
-      $this->number = $number;
-    }
-
-    function Count()
-    {
-      if($this->number%15==0)
+      if($number%15==0)
       {
         return "FizzBuzz";
       }
-      if($this->number %3==0)
+      if($number %3==0)
       {
         return "Fizz";
-      }else if($this->number%5==0)
+      }else if($number%5==0)
       {
         return "Buzz";
       }
       else
       {
-        return $this->number;
+        return $number;
       }
+    }
+}
+
+class FizzBuzz
+{
+    function __construct($number)
+    {
+      $this->number = FuzzBuzzOperand::cal($number);
+    }
+
+    function Count()
+    {
+        return $this->number;
     }
 }
 
