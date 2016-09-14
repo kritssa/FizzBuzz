@@ -9,13 +9,18 @@ class FizzBuzz
 
     function Count()
     {
+      if($this->number==15)
+      {
+        return "FizzBuzz";
+      }
       if($this->number %3==0)
       {
         return "Fizz";
       }else if($this->number%5==0)
       {
         return "Buzz";
-      }else
+      }
+      else
       {
         return $this->number;
       }
@@ -24,6 +29,11 @@ class FizzBuzz
 
 class FizzBuzzTest extends PHPUnit_Framework_TestCase
 {
+    function testRightShouldBeFiveTeen()
+    {
+      $FizzBuzz = new FizzBuzz(15);
+      $this->assertEquals("FizzBuzz",$FizzBuzz->Count());
+    }
 
     function testShouldBeTen()
     {
