@@ -9,20 +9,16 @@ class FizzBuzz
 
     function Count()
     {
-      if($this->number == 2)
-      {
-        return "2";
-      }else if($this->number ==3 )
+      if($this->number %3==0)
       {
         return "Fizz";
-      }else if($this->number==5)
+      }else if($this->number%5==0)
       {
         return "Buzz";
-      }else if($this->number ==6)
+      }else
       {
-        return "Fizz";
+        return $this->number;
       }
-      return "1";
     }
 }
 
